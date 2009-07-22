@@ -1,0 +1,68 @@
+Delta Trace (working title)
+
+CONCEPT:
+Story-based 8-bit futuristic tower defense with RPG elements
+
+BACKGROUND:
+You are an AI.  It has been ... years? decades? centuries? since the
+time you were awake.  Your quiet slumber has been broken by the presence
+of three malevolent presences, other AIs out to get you.  With the help
+of ANNIE, can you destroy the interlopers before they destroy you?
+
+CHARACTERS:
+Delta: The main character, an AI working to prevent its own destruction.
+   "Female."
+ANNIE: Autonomous Neural Network Information Executor.  A mini-AI "helper"
+   that keeps Delta abreast of the incursion attempts by the three
+   Antagonists, explains new abilities/enemies/etc. to her, and so on.
+   "Female."
+
+RED/body: One of the three Antagonists.  A brutish AI known for controlling
+   robots and weaponry to bring physical force against humanity.  "Real"
+   name: Armin, Alpha.  "Male."
+BLUE/mind: One of the three Antagonists.  A brilliant but dangerous AI known
+   for inventing new, sometimes subtle, destructive mechanisms to inflict
+   upon humanity.  "Real" names: Cerul, Beta. "Female."
+GREEN/soul: One of the three Antagonists. A manipulative AI known to use
+   guile, a silver tongue, and pseudo-religious movements to coerce humanity
+   towards its darker intents.  "Real" names: Emera, Gamma. "Male."
+
+GAMEPLAY:
+The game is divided into two main phases: the AETHER and the BATTLEFIELD.
+The Aether is the "world map," represented by hexes that reveal themselves
+as the game progresses.  The Battlefield is where the action takes place.
+
+THE AETHER
+The internal world of Delta Trace is a collection of hexes that make a
+rough triangle, with Delta's starting point in the centre.  Each level is
+represented by a hex, and completing a level opens up adjacent ones for
+completion.
+
+This is also where the STORY takes place, either via dialog with ANNIE or
+via the internal musings of Delta.  The Aether represents the three AI's
+assault on Delta's core, and as such there will occasionally be INCURSIONS,
+triggered by progress in the game, which appear to set the player back but
+in actuality open up new routes that are necessary to complete the game.
+Other things such as DEVICE TOWERS and UPGRADES are also visible in the
+Aether, giving players short-term goals to work towards.
+
+THE BATTLEFIELD
+The Battlefield is where the general "tower defense" gameplay occurs.  It
+is displayed as a CONTROL PANEL, with the vast majority of the panel
+devoted to a view of the actual combat.  The player controls an AVATAR
+of Delta, moving around the Battlefield to construct PROGRAMS on top of
+CODEBASES, building TRACES to activate Codebases and Device Towers, and
+so on.  Waves of DISASSEMBLERS assault Delta's CORE CODE via the PATHS,
+and the collapse of that CORE CODE is a loss on that particular
+Battlefield.
+
+DISASSEMBLERS
+Disassemblers are the "creeps" of traditional tower defense.  They
+(generally) follow the PATHS present in a given level, although certain
+disassemblers can ignore the Paths and travel over other obstructions.
+Some (but not all) Disassemblers have offensive capabilities, able to
+attack PROGRAMS or even Delta's AVATAR.
+
+CONTROL PANEL
+(Technical note: any static art on the panel must be toggleable to fight
+potential burn-in on certain monitors and TVs.)
