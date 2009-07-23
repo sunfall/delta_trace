@@ -46,6 +46,15 @@ in actuality open up new routes that are necessary to complete the game.
 Other things such as DEVICE TOWERS and UPGRADES are also visible in the
 Aether, giving players short-term goals to work towards.
 
+INCURSIONS
+At certain plot-related times, one of the three AIs (or <redacted>) may
+cause an Incursion into the AETHER.  This may overtake some BATTLEFIELDS
+that Delta already controls; however, an Incursion should fundamentally
+change any levels where this occurs, so as to keep the game from being
+repetitive.  In addition, an Incursion should always open up a new route
+to something (new ENHANCEMENTS, CONTROL TOWERS, or a route to fight the
+AI itself).
+
 THE BATTLEFIELD
 The Battlefield is where the general "tower defense" gameplay occurs.  It
 is displayed as a CONTROL PANEL, with the vast majority of the panel
@@ -77,7 +86,8 @@ disassemblers can ignore the Paths and travel over other obstructions.
 Some (but not all) Disassemblers have offensive capabilities, able to
 cause DAMAGE to PROGRAMS or even Delta's AVATAR.
 
-Destroying Disassemblers provides Delta with EXECUTION POINTS.
+Destroying Disassemblers provides Delta with both EXECUTION POINTS and
+PLOC.
 
 HEALTH
 Health is a graphical/numeric representation of how much DAMAGE a
@@ -117,12 +127,83 @@ hides the Memory Shard.
 
 TRACES
 Traces are the pathways by which Delta's CORE CODE provide executable
-energy to CODEBASES, DEVICE TOWERS, and UPGRADES.  Traces cost nothing,
+energy to CODEBASES, DEVICE TOWERS, and ENHANCEMENTS.  Traces cost nothing,
 but Delta must spend time building them, and leaving a Trace incomplete
 destroys that Trace.  Some locations on a BATTLEFIELD (the tops of
 Codebases, Device Towers, and Upgrades, along with other specially-marked
 locations) cannot have Traces built on top of them.
 
+INPUT
+CODEBASES, DEVICE TOWERS, and ENHANCEMENTS all have INPUTS.  All Inputs
+must have active TRACES running to them to activate the associated
+functionality.
+
+OUTPUT
+Some Codebases, Device Towers, and Enhancements may have Outputs.  The
+AVATAR can construct new TRACES from an Output as a continuation of the
+trace network.
+
+PROGRAMS
+Programs are the "towers" by which Delta destroys the approaching
+DISASSEMBLERS before they can destroy her CORE CODE on each BATTLEFIELD.
+Different types of Programs do different things, such as slow the
+Disassemblers down, cause splash damage, and so on.  (The particular
+Program types should be covered in a separate, more-detailed document.)
+Programs cost PLOC to build and UPGRADE, and can be destroyed if they
+take too much DAMAGE.
+
+PLOC
+PLOC are Petalines of Code, and are the "currency" with which Delta
+"writes" PROGRAMS.  PLOC are not carried over between BATTLEFIELDS, as
+the code written is specific to each Battlefield.
+
+UPGRADES
+PROGRAMS can be upgraded, although upgrades themselves may have to be
+gained through an ENHANCEMENT.  Upgrades cost PLOC, but upgraded Programs
+have additional functionality.
+
+DEVICE TOWERS
+Device Towers are located in certain BATTLEFIELDS.  If a Device Tower has
+all of its INPUTS activated, it provides a significant benefit to both
+the current Battlefield and those within a certain radius of effect.  A
+sample Device Tower may increase SOFTWARE writing speed by 50% in the
+current Battlefield, by 30% in those immediately adjacent, and by 15% in
+those two hexes away.  Battlefields must be completed successfully for
+the Device Tower's benefits to extend beyond the immediate battle.
+
+ENHANCEMENTS
+Enhancements are located in certain BATTLEFIELDS.  If an Enhancement has
+all of its INPUTS activated, it gives Delta new functionality.  This can
+be anything from new types of PROGRAMS, new levels of UPGRADES to her
+existing programs, or permanent bonuses to Delta's abilties.  Battlefields
+must be completed successfully for the Enhancement's benefits to extend
+beyond the immediate battle.
+
+(Note that Enhancements could even do things like open new routes, as a
+sort of "gatekeeper" mechanism.  Care must be taken with this sort of
+Enhancement, though, as it would be very irritating to have to continue
+to replay a Battlefield because the player can't quite get to activating
+the Enhancement before the battle is over.)
+
+EXECUTION POINTS
+Execution Points are a type of Experience that Delta gains as she
+progresses through the Battlefields.  Execution Points (or EP) can be
+spent on increasing her abilities permanently.  This provides players
+with a way to "grind" past difficult levels, although it should (might?)
+be possible to beat the game without spending EP.
+
+MEMORY SHARDS
+Memory Shards are pieces of Delta's fractured memory scattered about
+certain Battlefields.  Collection of all of the MEMORY SHARDS is
+necessary to unlock the path to the true ending of the game.  Further
+details can be found in the STORY.
+
 CONTROL PANEL
 (Technical note: any static art on the panel must be toggleable to fight
 potential burn-in on certain monitors and TVs.)
+
+The Control Panel's design decisions should be covered in a separate,
+more-detailed document.
+
+STORY
+The story should be covered in a separate, more-detailed document.
