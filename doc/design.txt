@@ -56,18 +56,54 @@ so on.  Waves of DISASSEMBLERS assault Delta's CORE CODE via the PATHS,
 and the collapse of that Core Code is a loss on that particular
 Battlefield.
 
+AVATAR
+Delta's Avatar is her representation both in the AETHER and on the
+BATTLEFIELD.  In general, the player interacts with the game by moving
+the Avatar over a location and using context-sensitive CONTROLS.  On
+the Battlefield, it is possible for the Avatar to take DAMAGE and
+experience a SOFT CRASH if it loses all of its HEALTH.
+
 CORE CODE
 Each BATTLEFIELD has a spot where Delta's Core Code on that Battlefield
 is stored.  If DISASSEMBLERS reach the Core Code, it is damaged.  If too
-many reach it, it is destroyed and the level is lost (but can be
-reattempted).  Delta's AVATAR can return to the Core Code to be repaired.
+many reach it, it is a HARD CRASH and the level is lost (but it may be
+reattempted).  Delta's AVATAR can return to the Core Code to be repaired
+before it experiences a SOFT CRASH.
 
 DISASSEMBLERS
 Disassemblers are the "creeps" of traditional tower defense.  They
 (generally) follow the PATHS present in a given level, although certain
 disassemblers can ignore the Paths and travel over other obstructions.
 Some (but not all) Disassemblers have offensive capabilities, able to
-attack PROGRAMS or even Delta's AVATAR.
+cause DAMAGE to PROGRAMS or even Delta's AVATAR.
+
+Destroying Disassemblers provides Delta with EXECUTION POINTS.
+
+HEALTH
+Health is a graphical/numeric representation of how much DAMAGE a
+PROGRAM, DISASSEMBLER, Delta's AVATAR, or her CORE CODE can take.
+
+DAMAGE
+PROGRAMS, DISASSEMBLERS, and Delta's AVATAR and CORE CODE can all take
+damage.  When Disassemblers and Programs take more damage than their
+HEALTH allows, they are destroyed; if Delta's Avatar takes more damage
+than her health allows, she experiences a SOFT CRASH.  When the Core
+Code takes more damage than its health allows, she experiences a HARD
+CRASH.
+
+SOFT CRASH
+If Delta's AVATAR takes too much DAMAGE, she experiences a Soft Crash.
+The CONTROL PANEL blanks out temporarily while her awareness reboots;
+while this occurs, the game continues to run in the background (so
+DISASSEMBLERS continue to approach), but all PROGRAMS are temporarily
+disabled.  After the SOFT CRASH is over, Delta's AVATAR is returned to
+her CORE CODE to continue playing.
+
+HARD CRASH
+If Delta's CORE CODE takes too much DAMAGE, she experiences a Hard Crash.
+This causes an immediate loss of that Battlefield, although it may be
+immediately re-attempted.  In addition, Delta may only keep a portion of
+the EXECUTION POINTS she gained during the battle.
 
 CODEBASES
 Codebases provide the foundation for PROGRAMS, which Delta uses to attack
@@ -75,7 +111,9 @@ the DISASSEMBLERS that are attempting to compromise her CORE CODE.  Most
 Codebases start out inactive, and Delta must build TRACES to their INPUTS
 to activate them.  Programs on an inactive codebase do nothing.
 
-Some spaces on Codebases hide MEMORY SHARDS.
+Some spaces on Codebases hide MEMORY SHARDS; these are revealed and added
+to the DATABANKS whenever a Program is built on top of the space that
+hides the Memory Shard.
 
 TRACES
 Traces are the pathways by which Delta's CORE CODE provide executable
