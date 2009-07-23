@@ -10,7 +10,7 @@ of three malevolent presences, other AIs out to get you.  With the help
 of ANNIE, can you destroy the interlopers before they destroy you?
 
 CHARACTERS:
-Delta: The main character, an AI working to prevent its own destruction.
+DELTA: The main character, an AI working to prevent its own destruction.
    "Female."
 ANNIE: Autonomous Neural Network Information Executor.  A mini-AI "helper"
    that keeps Delta abreast of the incursion attempts by the three
@@ -38,7 +38,7 @@ rough triangle, with Delta's starting point in the centre.  Each level is
 represented by a hex, and completing a level opens up adjacent ones for
 completion.
 
-This is also where the STORY takes place, either via dialog with ANNIE or
+This is also where the STORY takes place, either via dialog with Annie or
 via the internal musings of Delta.  The Aether represents the three AI's
 assault on Delta's core, and as such there will occasionally be INCURSIONS,
 triggered by progress in the game, which appear to set the player back but
@@ -51,10 +51,16 @@ The Battlefield is where the general "tower defense" gameplay occurs.  It
 is displayed as a CONTROL PANEL, with the vast majority of the panel
 devoted to a view of the actual combat.  The player controls an AVATAR
 of Delta, moving around the Battlefield to construct PROGRAMS on top of
-CODEBASES, building TRACES to activate Codebases and Device Towers, and
+CODEBASES, building TRACES to activate Codebases and DEVICE TOWERS, and
 so on.  Waves of DISASSEMBLERS assault Delta's CORE CODE via the PATHS,
-and the collapse of that CORE CODE is a loss on that particular
+and the collapse of that Core Code is a loss on that particular
 Battlefield.
+
+CORE CODE
+Each BATTLEFIELD has a spot where Delta's Core Code on that Battlefield
+is stored.  If DISASSEMBLERS reach the Core Code, it is damaged.  If too
+many reach it, it is destroyed and the level is lost (but can be
+reattempted).  Delta's AVATAR can return to the Core Code to be repaired.
 
 DISASSEMBLERS
 Disassemblers are the "creeps" of traditional tower defense.  They
@@ -62,6 +68,22 @@ Disassemblers are the "creeps" of traditional tower defense.  They
 disassemblers can ignore the Paths and travel over other obstructions.
 Some (but not all) Disassemblers have offensive capabilities, able to
 attack PROGRAMS or even Delta's AVATAR.
+
+CODEBASES
+Codebases provide the foundation for PROGRAMS, which Delta uses to attack
+the DISASSEMBLERS that are attempting to compromise her CORE CODE.  Most
+Codebases start out inactive, and Delta must build TRACES to their INPUTS
+to activate them.  Programs on an inactive codebase do nothing.
+
+Some spaces on Codebases hide MEMORY SHARDS.
+
+TRACES
+Traces are the pathways by which Delta's CORE CODE provide executable
+energy to CODEBASES, DEVICE TOWERS, and UPGRADES.  Traces cost nothing,
+but Delta must spend time building them, and leaving a Trace incomplete
+destroys that Trace.  Some locations on a BATTLEFIELD (the tops of
+Codebases, Device Towers, and Upgrades, along with other specially-marked
+locations) cannot have Traces built on top of them.
 
 CONTROL PANEL
 (Technical note: any static art on the panel must be toggleable to fight
