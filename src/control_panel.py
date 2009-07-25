@@ -1,3 +1,5 @@
+import os
+import pyglet
 import ConfigParser
 
 class ControlPanelError(Exception): pass
@@ -41,17 +43,23 @@ class ControlPanel(object):
 
 class ControlPanelSkin(object):
     def __init__(self, skin_name):
-        dat_path = '../data/control_panels/%s/%s.dat' % ((skin_name,) * 2)
+        # TODO: Fix path (has to be run from src dir to work in this state)
+        skin_dir = os.path.join('..', 'data', 'control_panels', skin_name)
 
         dat_parser = ConfigParser.SafeConfigParser()
 
         try:
-            dat_parser.readfp(open(dat_path))
+            dat_parser.readfp(open(os.path.join(skin_dir, skin_name + '.dat')))
         except IOError:
             raise ControlPanelSkinError, 'skin %s was not found' % skin_name
 
         image_files = dat_parser.items('Image Files')
+        name_to_path = dict([(k, skin_dir + os.sep + v) for k,v in image_files])
+
+        self.straight_img = pyglet.image.load(name_to_path['straight'])
+        self.corner_img = pyglet.image.load(name_to_path['corner'])
+        self.plus_img = pyglet.image.load(name_to_path['plus'])
+        self.border_split_img = pyglet.image.load(name_to_path['border_split'])
 
 if __name__ == '__main__':
     control_panel = ControlPanel('basic')
-    print control_panel.__dict__
