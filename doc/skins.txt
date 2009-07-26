@@ -1,0 +1,28 @@
+Design and Implementation of Skins
+==================================
+
+Definition
+----------
+
+A skin decorates the UI borders of Delta Trace. These parts include (but are 
+not limited to) the battlefield, the aether, and message boxes.
+
+Creation
+--------
+
+The easiest way to create a skin is to follow the example of data/skins/basic.
+
+You can follow these explicit directions, though:
+
+- Make a directory in the data/skins/ directory. Name it the name of your skin.
+- Create four 8x8 pngs
+  - One that will be used for a vertical line
+  - One that will be used for a northwestern corner
+  - One that will be used for a 3-way split that is open on the west side
+  - One that is quartered (looks like a plus)
+- Create a [skin_name].dat file
+  - It should have a single section called "Image Files"
+  - It should have the keys straight, corner, t, and plus
+  - It's values should point to the images you just created, respectively
+- Run tools/apply_skins_to_maps.py with your skin name as the argument
+- Check your skin directory
