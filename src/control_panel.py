@@ -9,7 +9,7 @@ class ControlPanelSkinError(Exception): pass
 
 class ControlPanel(object):
     def __init__(self, skin_name):
-        self.skin_name = 'basic'
+        self.skin_name = skin_name
 
         self.cached_skins = {}
 
@@ -41,7 +41,12 @@ class ControlPanel(object):
 
 
 if __name__ == '__main__':
-    control_panel = ControlPanel('basic')
+    import sys
+
+    if len(sys.argv) > 1:
+        control_panel = ControlPanel(sys.argv[1])
+    else:
+        control_panel = ControlPanel('basic')
 
     window = pyglet.window.Window(256, 240)
 
