@@ -26,3 +26,15 @@ You can follow these explicit directions, though:
   - It's values should point to the images you just created, respectively
 - Run tools/apply_skins_to_maps.py with your skin name as the argument
 - Check your skin directory
+
+apply_skins_to_maps.py
+----------------------
+
+This script will generate images for every map file in the data/ui_maps 
+directory. It will look in the data/skins directory for the arguments you 
+give it.
+
+If run with no arguments, the script will generate new maps for all skins in 
+the data/skins direcroty.
+
+You can give it as many arguments as you want.
