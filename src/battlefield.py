@@ -100,7 +100,12 @@ class Battlefield(object):
 
 
 if __name__ == '__main__':
-    grid = Battlefield('test.map')
+    import sys
+
+    if len(sys.argv) > 1:
+        grid = Battlefield(sys.argv[1])
+    else:
+        grid = Battlefield('test.map')
 
     window = pyglet.window.Window(256, 240)
 
