@@ -1,23 +1,33 @@
 #!/usr/bin/env python
 
 import os
-import pyglet
+import pygame
 
 MAPS_PATH = os.path.join('data', 'stages')
+TILES_PATH = os.path.join('data', 'tiles', 'battlefield')
 
-# TODO: Clean up
-tile_path = os.path.join('data', 'tiles', 'battlefield')
-pngs = [fname for fname in os.listdir(tile_path) if fname[-4:] == '.png']
-TILE_IMGS = dict([(f[:-4], pyglet.image.load(os.path.join(tile_path + os.sep +
-                                                          f))) for f in pngs])
+# TODO: Blit tiles onto battleground then render that?
 
-class Square(object):
+# Load all tile images
+pngs = [f for f in os.listdir(TILES_PATH) if f[-4:] == '.png']
+loaded_images = [pygame.image.load(os.path.join(TILES_PATH, p)) for p in pngs]
+TILE_IMGS = dict(zip([p[:-4] for p in pngs], loaded_images))
+
+class Sprite(pygame.sprite.Sprite):
+    group = pygame.sprite.RenderUpdates()
+
+    def __init__(self):
+        pygame.sprite.Sprite.__init__(self, self.group)
+
+
+class Square(Sprite):
     def __init__(self, grid_x, grid_y):
+        Sprite.__init__(self)
+
         self.grid_x = grid_x
         self.grid_y = grid_y
 
-    def draw(self, x, y):
-        self.image.blit(x, y)
+        self.rect = pygame.rect.Rect((self.grid_x * 16, self.grid_y * 16,16,16))
 
 
 class FloorTile(Square):
@@ -31,8 +41,6 @@ class CodeBaseTile(Square):
     def __str__(self):
         return '1'
 
-class CodeBase(object):
-    pass
 
 class Battlefield(object):
     def __init__(self, map_name):
@@ -93,25 +101,13 @@ class Battlefield(object):
 
             tile.image = TILE_IMGS['codebase_' + suffix]
 
-    def draw(self, x, y):
-        for i, row in enumerate(self.tiles):
-            for j, tile in enumerate(row):
-                tile.draw(x + 16 * j, y + 16 * i)
-
-
 if __name__ == '__main__':
     import sys
+    from utils import render_sprite_groups
 
     if len(sys.argv) > 1:
         grid = Battlefield(sys.argv[1])
     else:
         grid = Battlefield('test.map')
 
-    window = pyglet.window.Window(256, 240)
-
-    @window.event
-    def on_draw():
-        window.clear()
-        grid.draw(0, 0)
-
-    pyglet.app.run()
+    render_sprite_groups(Sprite.group)
