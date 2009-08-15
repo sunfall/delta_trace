@@ -1,0 +1,5 @@
+Integrate corner graphics into battlefield rendering
+Create a home tile and functionality for it
+Implement tile selection with highlighting
+Implement events that come from Battlefields
+Implement button menu
