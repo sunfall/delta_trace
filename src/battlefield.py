@@ -85,21 +85,24 @@ class Battlefield(object):
         all_coords = [(t.grid_x, t.grid_y) for t in cb_tiles]
 
         for tile in cb_tiles:
-            suffix = 'nesw'
+            suffix = ''
 
-            if (tile.grid_x, tile.grid_y - 1) in all_coords:
-                suffix = suffix.replace('n', '')
+            if (tile.grid_x, tile.grid_y - 1) not in all_coords:
+                suffix += 'n'
 
-            if (tile.grid_x, tile.grid_y + 1) in all_coords:
-                suffix = suffix.replace('s', '')
+            if (tile.grid_x + 1, tile.grid_y) not in all_coords:
+                suffix += 'e'
 
-            if (tile.grid_x + 1, tile.grid_y) in all_coords:
-                suffix = suffix.replace('e', '')
+            if (tile.grid_x, tile.grid_y + 1) not in all_coords:
+                suffix += 's'
 
-            if (tile.grid_x - 1, tile.grid_y) in all_coords:
-                suffix = suffix.replace('w', '')
+            if (tile.grid_x - 1, tile.grid_y) not in all_coords:
+                suffix += 'w'
 
-            tile.image = TILE_IMGS['codebase_' + suffix]
+            if suffix:
+                suffix = '_' + suffix
+
+            tile.image = TILE_IMGS['codebase' + suffix]
 
 if __name__ == '__main__':
     import sys
